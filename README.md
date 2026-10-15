@@ -20,6 +20,14 @@ Built with a focus on **distributed systems resilience, deterministic state mana
 
 ---
 
+## 📜 Architecture Decision Records (ADRs)
+
+| ADR | Title | Status | Primary Decision |
+| :--- | :--- | :--- | :--- |
+| [`0001`](./docs/adrs/0001-mcp-stdio-vs-sse-transport.md) | Model Context Protocol Transport Selection | Accepted | `stdio` for local IPC, Streamable HTTP for cloud/multi-tenant |
+
+---
+
 ## 📐 System Architecture Overview
 
 ```mermaid
