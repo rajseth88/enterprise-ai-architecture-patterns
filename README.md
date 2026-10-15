@@ -27,14 +27,3 @@ Built with a focus on **distributed systems resilience, deterministic state mana
 | [`0001`](./docs/adrs/0001-mcp-stdio-vs-sse-transport.md) | Model Context Protocol Transport Selection | Accepted | `stdio` for local IPC, Streamable HTTP for cloud/multi-tenant |
 
 ---
-
-## 📐 System Architecture Overview
-
-```mermaid
-graph TD
-    A[Client / Claude / Custom Agent] -->|MCP Protocol - stdio/SSE| B[Enterprise MCP Gateway]
-    B --> C{Tool Router & Auth}
-    C -->|Query Execution| D[PostgreSQL Read Replica]
-    C -->|EXPLAIN ANALYZE| E[Query Plan Analyzer]
-    E -->|Index Suggestion| F[Schema Advisory Engine]
-    F -->|Structured JSON Response| A
